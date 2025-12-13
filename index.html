@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUNA Cafe Menu</title>  <!-- Fonts -->  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">  <style>
+    :root{
+      --dark-bg:#0b0d12;
+      --hot-accent:#c9a24d;
+      --cold-accent:#6fa8dc;
+      --text-main:#e6e6e6;
+      --text-muted:#9fa4ad;
+      --divider:#2a2e3a;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      background:radial-gradient(circle at top, #151926, var(--dark-bg));
+      color:var(--text-main);
+      font-family:Inter, sans-serif;
+      line-height:1.6;
+    }
+
+    header{
+      text-align:center;
+      padding:60px 20px 40px;
+    }
+
+    header h1{
+      font-family:"Playfair Display", serif;
+      font-size:42px;
+      letter-spacing:4px;
+      margin:0 0 10px;
+    }
+
+    header p{
+      color:var(--text-muted);
+      margin:0;
+      font-size:14px;
+      letter-spacing:1px;
+    }
+
+    .menu{
+      max-width:1100px;
+      margin:0 auto 80px;
+      padding:0 20px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+    }
+
+    .column{
+      padding:30px 28px;
+      border-radius:14px;
+      background:rgba(255,255,255,0.02);
+      backdrop-filter:blur(6px);
+    }
+
+    .hot{
+      border:1px solid rgba(201,162,77,0.25);
+    }
+
+    .cold{
+      border:1px solid rgba(111,168,220,0.25);
+      background:linear-gradient(180deg, rgba(111,168,220,0.06), rgba(255,255,255,0.01));
+    }
+
+    .column h2{
+      font-family:"Playfair Display", serif;
+      font-size:24px;
+      margin:0 0 20px;
+      letter-spacing:2px;
+    }
+
+    .hot h2{color:var(--hot-accent)}
+    .cold h2{color:var(--cold-accent)}
+
+    .section{
+      margin-bottom:26px;
+    }
+
+    .section-title{
+      font-size:13px;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+      color:var(--text-muted);
+      border-bottom:1px solid var(--divider);
+      padding-bottom:6px;
+      margin-bottom:12px;
+    }
+
+    ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+
+    li{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      padding:6px 0;
+      font-size:14px;
+    }
+
+    li span{
+      color:var(--text-muted);
+      font-size:13px;
+      white-space:nowrap;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px 20px;
+      font-size:12px;
+      color:var(--text-muted);
+      letter-spacing:1px;
+    }
+
+    @media (max-width:900px){
+      .menu{grid-template-columns:1fr}
+    }
+  </style></head>
+<body><header>
+  <h1>LUNA CAFE</h1>
+  <p>Crafted Under The Moonlight</p>
+</header><main class="menu">  <!-- HOT COLUMN -->  <section class="column hot">
+    <h2>HOT DRINKS | نوشیدنی‌های گرم</h2><div class="section">
+  <div class="section-title">ESPRESSO BASED | بر پایه اسپرسو</div>
+  <ul>
+    <li>Espresso <span>اسپرسو</span></li>
+    <li>Americano <span>آمریکانو</span></li>
+    <li>Cappuccino <span>کاپوچینو</span></li>
+    <li>Cortado <span>کورتادو</span></li>
+    <li>Latte <span>لاته</span></li>
+    <li>Caramel Latte <span>لاته کارامل</span></li>
+    <li>Vanilla Latte <span>لاته وانیل</span></li>
+    <li>Hazelnut Latte <span>لاته فندق</span></li>
+    <li>Mocha <span>موکا</span></li>
+    <li>White Mocha <span>وایت موکا</span></li>
+    <li>Irish Latte <span>لاته آیریش</span></li>
+    <li>Hype Espresso <span>هایپ اسپرسو</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <div class="section-title">CHOCOLATE & SPECIAL | شکلات داغ</div>
+  <ul>
+    <li>Hot Chocolate <span>هات چاکلت</span></li>
+    <li>White Chocolate <span>وایت چاکلت</span></li>
+    <li>Pink Chocolate <span>پینک چاکلت</span></li>
+    <li>Chip Chocolate <span>چیپ چاکلت</span></li>
+    <li>Marshmallow Chocolate <span>مارشمالو چاکلت</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <div class="section-title">TEA & HERBAL | چای و دمنوش</div>
+  <ul>
+    <li>Tea <span>چای</span></li>
+    <li>Tea for Two <span>چای دو نفره</span></li>
+    <li>Black Tea <span>چای سیاه</span></li>
+    <li>Relax Herbal Tea <span>دمنوش آرامش</span></li>
+    <li>Thyme Tea <span>دمنوش آویشن</span></li>
+    <li>Sour Tea <span>چای ترش</span></li>
+    <li>Ginger Tea <span>دمنوش زنجبیل</span></li>
+  </ul>
+</div>
+
+  </section>  <!-- COLD COLUMN -->  <section class="column cold">
+    <h2>COLD DRINKS | نوشیدنی‌های سرد</h2><div class="section">
+  <div class="section-title">ICED COFFEE | قهوه سرد</div>
+  <ul>
+    <li>Iced Americano <span>آیس آمریکانو</span></li>
+    <li>Iced Latte <span>آیس لاته</span></li>
+    <li>Iced Matcha Latte <span>آیس ماچا لاته</span></li>
+    <li>Iced Mocha <span>آیس موکا</span></li>
+    <li>Iced Vanilla Latte <span>آیس لاته وانیل</span></li>
+    <li>Iced Caramel Latte <span>آیس لاته کارامل</span></li>
+    <li>Iced Irish Latte <span>آیس لاته آیریش</span></li>
+    <li>Iced Hazelnut Latte <span>آیس لاته فندق</span></li>
+    <li>Iced Coconut Latte <span>آیس لاته نارگیل</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <div class="section-title">COLD BAR | بار سرد</div>
+  <ul>
+    <li>Iced Caramel Macchiato <span>آیس کارامل ماکیاتو</span></li>
+    <li>Galaxy <span>گلکسی</span></li>
+    <li>Lemonade <span>لیموناد</span></li>
+    <li>Mojito <span>موهیتو</span></li>
+  </ul>
+</div>
+
+<div class="section">
+  <div class="section-title">MILKSHAKES & SPECIAL | میلک‌شیک</div>
+  <ul>
+    <li>Vanilla Shake <span>میلک‌شیک وانیل</span></li>
+    <li>Strawberry Shake <span>میلک‌شیک توت‌فرنگی</span></li>
+    <li>Chocolate Shake <span>میلک‌شیک شکلات</span></li>
+    <li>Nutella Shake <span>میلک‌شیک نوتلا</span></li>
+    <li>Affogato <span>افوگاتو</span></li>
+    <li>Iced Chocolate <span>آیس چاکلت</span></li>
+    <li>Iced Spirulina <span>آیس اسپیرولینا</span></li>
+  </ul>
+</div>
+
+  </section></main><footer>
+  LUNA CAFE MENU
+</footer></body>
+</html>
